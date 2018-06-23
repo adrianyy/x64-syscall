@@ -4,7 +4,7 @@
 extern "C" void _DoSyscall( );
 
 template< typename ReturnType = void, typename... Args,
-		  typename T1 = void*, typename T2 = void*, typename T3 = void*, typename T4 = void* >
+          typename T1 = void*, typename T2 = void*, typename T3 = void*, typename T4 = void* >
 ReturnType Syscall( const uint64_t Index, T1 A1 = { }, T2 A2 = { }, T3 A3 = { }, T4 A4 = { }, Args... Arguments )
 {
 	static_assert( sizeof( void* ) == 8, "Only x64 is supported." );
